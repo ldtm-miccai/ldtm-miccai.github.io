@@ -13,17 +13,96 @@
             padding: 0;
             background-color: #f8f9fa;
         }
-
+        
         header {
-            /* background-color: #343a40; */
-            background-image: url("assets/Djemaa_el_Fna_crop2.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            /* background-attachment: fixed; */
-            color: #fff;
-            padding: 60px;
-            text-align: center;
+        background-color: #f8f8f8;
+        padding: 30px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        min-height: 120px; /* Adjust based on your logo size */
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 100px;
+        width: auto;
+    }
+
+    .workshop-logo {
+        left: 0;
+    }
+
+    .main-conference-logo {
+        right: -40px;
+    }
+
+    .workshop-info {
+        text-align: center;
+        padding: 0 200px; /* Adjust based on your logo size */
+    }
+
+    .workshop-name {
+        font-size: 40px;
+        margin: 0 0 10px 0;
+        color: #333;
+    }
+
+    .workshop-date {
+        font-size: 20px;
+        margin: 0;
+        color: #666;
+    }
+
+    @media (max-width: 768px) {
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: auto;
         }
+
+        .logo {
+            position: static;
+            transform: none;
+            margin: 10px 0;
+        }
+
+        .workshop-info {
+            order: -1;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .workshop-name {
+            font-size: 28px;
+        }
+
+        .workshop-date {
+            font-size: 18px;
+        }
+    }
+
+
+
+
+
+        /* header {
+            /* background-color: #343a40; */
+            /* background-image: url("assets/Djemaa_el_Fna_crop2.jpg"); */
+            /* background-size: cover; */
+            /* background-repeat: no-repeat; */
+            /* background-attachment: fixed; */
+            /* color: #fff; */
+            /* padding: 60px; */
+            /* text-align: center; */
+        /* } */ 
 
         nav {
             background-color: #343a40;
@@ -102,25 +181,155 @@
             margin-bottom: 5px;
         }
 
+        .speaker {
+        font-style: italic;
+        color: #666;
+    }
+
         .organizer-affiliation {
             color: #666;
         }
+        .responsive-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    #keynote-speakers {
+        padding: 20px;
+    }
+
+    .keynote-speaker-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .keynote-speaker {
+        width: 300px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .keynote-speaker-image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .affiliation {
+        font-style: italic;
+        color: #666;
+        margin: 5px 0;
+    }
+
+    .bio {
+        font-style: italic;
+    }
+
+    .abstract {
+        display: none;
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    .abstract.show {
+        display: block;
+    }
+
+    .abstract-toggle {
+        background-color: #f0f0f0;
+        border: none;
+        padding: 5px 10px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+        .keynote-speaker {
+            width: 100%;
+        }
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .responsive-table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    @media screen and (max-width: 600px) {
+        .responsive-table thead {
+            display: none;
+        }
+
+        .responsive-table tr {
+            display: block;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .responsive-table td {
+            display: block;
+            text-align: right;
+            padding-left: 50%;
+            position: relative;
+        }
+
+        .responsive-table td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 6px;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+        }
+    }
+    
+</style>
     </style>
+
+
 </head>
 
+
 <body>
+    <!-- <header>
+        <img src="Djemaa_el_Fna.jpg" alt="Conference Image" width="300" height="150">
+        <!-- <h1 style="color:#343a40; text-align: center">Longitudinal Disease Tracking and Modelling with Medical Images -->
+            <!-- and Data (LDTM)</h1> -->
+        <!-- <h2 style="color: #7B1D09; text-align: center">A Satellite Workshop with <img src="assets/miccai2023-logo.png" , -->
+                <!-- width="250" , height="130"></h2> -->
+        <!-- <h1 style="color:#7B1D09"> October 10, 2024</h1> -->
+    <!-- </header> --> 
+
     <header>
-        <!-- <img src="Djemaa_el_Fna.jpg" alt="Conference Image" width="300" height="150"> -->
-        <h1 style="color:#343a40; text-align: center">Longitudinal Disease Tracking and Modelling with Medical Images
-            and Data (LDTM)</h1>
-        <h2 style="color: #7B1D09; text-align: center">A Satellite Workshop with <img src="assets/miccai2023-logo.png" ,
-                width="250" , height="130"></h2>
-        <h1 style="color:#7B1D09"> October 10, 2024</h1>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="./assets/LDTM_Logo/LDTM2.png" alt="Workshop Logo" class="logo workshop-logo">
+                <img src="./assets/miccai2023-logo.png" alt="Main Conference Logo" class="logo main-conference-logo">
+            </div>
+            <div class="workshop-info">
+                <h1 class="workshop-name">Longitudinal Disease Tracking and Modelling with Medical Images and Data</h1>
+                <p class="workshop-date">October 10, 2024</p>
+            </div>
+        </div>
     </header>
+
     <nav class="d-none d-md-block">
         <a href="#aims-and-scope">Aims and Scope</a>
         <a href="#call-for-papers">Call for Papers</a>
         <a href="#important-dates">Important Dates</a>
+        <a href="#keynote-speakers">Keynote Speakers</a>
         <a href="#agenda">Agenda</a>
         <a href="#organizers">Organizers</a>
     </nav>
@@ -243,9 +452,183 @@
             </ul>
         </section>
 
+        <section id="keynote-speakers">
+            <h2>Keynote Speakers</h2>
+            <div class="keynote-speaker-container">
+                <div class="keynote-speaker">
+                    <img src="./assets/jacob_vogel.jpg" alt="Dr. Jacob Vogel" class="keynote-speaker-image">
+                    <h3>Dr. Jacob Vogel</h3>
+                    <p class="affiliation">DDLS Fellow, Lund University</p>
+                    <p><a href="https://portal.research.lu.se/en/persons/jacob-vogel" target="_blank">Website</a></p>
+                    <!-- <p class="bio">Dr. Jane Smith is a renowned AI researcher and author of "The Future of Intelligence".</p> -->
+                    <h4>Talk title: TBD</h4>
+                    <button class="abstract-toggle">Show Abstract</button>
+                    <p class="abstract">TBD.</p>
+                </div>
+                <div class="keynote-speaker">
+                    <img src="./assets/Dako_Farouk.jpg" alt="Dr. Farouk Dako, MD MPH" class="keynote-speaker-image">
+                    <h3>Dr. Farouk Dako</h3>
+                    <p class="affiliation">Assistant Professor of  Radiology, University of Pennsylvania</p>
+                    <p><a href="https://www.pennmedicine.org/providers/profile/farouk-dako" target="_blank">Website</a></p>
+                    <!-- <p class="bio">TBD</p> -->
+                    <h4>Talk title: TBD</h4>
+                    <button class="abstract-toggle">Show Abstract</button>
+                    <p class="abstract">TBD</p>
+                </div>
+            </div>
+        </section>
+
         <section id="agenda">
             <h2>Agenda</h2>
-            <p>The agenda for the conference will be updated soon.</p>
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Session</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Time">1:30 PM - 1:35 PM</td>
+                        <td data-label="Session">
+                            <strong>Welcome and introduction</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">1:35 AM - 2:20 PM</td>
+                        <td data-label="Session">
+                            <strong>Keynote 1</strong>
+                            <br>
+                            <span class="speaker">Dr. Jacob Vogel</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">2:20 PM - 2:31 PM</td>
+                        <td data-label="Session">
+                            <strong>DP-MoSt for detecting sub-trajectories in the natural history of pathologies</strong>
+                            <br>
+                            <span class="speaker">Alessandro Viani</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">2:31 PM - 2:42 PM</td>
+                        <td data-label="Session">
+                            <strong>Back to the Future: Challenges of Sparse and Irregular Medical Image Time Series</strong>
+                            <br>
+                            <span class="speaker">Nico A Disch</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">2:42 PM - 2:53 PM</td>
+                        <td data-label="Session">
+                            <strong>Probabilistic Temporal Prediction of Continuous Disease Trajectories and Treatment Effects Using Neural SDEs</strong>
+                            <br>
+                            <span class="speaker">Joshua D Durso-Finley</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">2:53 PM - 3:04 PM</td>
+                        <td data-label="Session">
+                            <strong>Enhancing Spatiotemporal Disease Progression Models via Latent Diffusion and Prior Knowledge</strong>
+                            <br>
+                            <span class="speaker">Lemuel Puglisi</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">3:04 PM - 3:15 PM</td>
+                        <td data-label="Session">
+                            <strong>Individualized multi-horizon MRI trajectory prediction for Alzheimer's Disease</strong>
+                            <br>
+                            <span class="speaker">Rosemary Y He</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">3:15 PM - 3:30 PM</td>
+                        <td data-label="Session">
+                            <strong>Towards Longitudinal Characterization of Multiple Sclerosis Atrophy Employing SynthSeg Framework and Normative Modeling</strong>
+                            <br>
+                            <span class="speaker">Pedro Macias Gordaliza</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">3:30 PM - 4:00 PM</td>
+                        <td data-label="Session">
+                            <strong>Coffee Break</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">4:00 PM - 4:45 PM</td>
+                        <td data-label="Session">
+                            <strong>Keynote 2</strong>
+                            <br>
+                            <span class="speaker">Dr. Farouk Dako</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">4:45 PM - 4:50 PM</td>
+                        <td data-label="Session">
+                            <strong>Automated Segmentation and Registration of Fundus Autofluorescence Imaging facilitates better monitoring of Geographic Atrophy Growth</strong>
+                            <br>
+                            <span class="speaker">Yoga Advaith Veturi</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">4:50 PM - 5:01 PM</td>
+                        <td data-label="Session">
+                            <strong>SegHeD: Segmentation of Heterogeneous Data for Multiple Sclerosis Lesions with Anatomical Constraints</strong>
+                            <br>
+                            <span class="speaker">Berke D Basaran</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">5:01 PM - 5:12 PM</td>
+                        <td data-label="Session">
+                            <strong>Longitudinal Segmentation of MS Lesions via Temporal Difference Weighting</strong>
+                            <br>
+                            <span class="speaker">Maximilian R Rokuss</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">5:12 PM - 5:23 PM</td>
+                        <td data-label="Session">
+                            <strong>Registration of Longitudinal Liver Examinations for Tumor Progress Assessment</strong>
+                            <br>
+                            <span class="speaker">Walid Yassine</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">5:23 PM - 5:34 PM</td>
+                        <td data-label="Session">
+                            <strong>Tracking lesion evolution using a Boundary Enhanced Approach for MS change segmentation (BEAMS)</strong>
+                            <br>
+                            <span class="speaker">Prateek Mathur</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">5:34 PM - 5:45 PM</td>
+                        <td data-label="Session">
+                            <strong>A Radiological-based Coordinate System for the Human Body: A Proof-of-Concept</strong>
+                            <br>
+                            <span class="speaker">Stefano Trebeschi</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">5:45 PM - 5:56 PM</td>
+                        <td data-label="Session">
+                            <strong>Vestibular schwannoma growth prediction from longitudinal MRI by time conditioned neural fields</strong>
+                            <br>
+                            <span class="speaker">TBD</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Time">5:56 PM - 6:00 PM</td>
+                        <td data-label="Session">
+                            <strong>Closing remarks and adjournment</strong>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
         </section>
 
 
@@ -378,6 +761,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.querySelectorAll('.abstract-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const abstract = button.nextElementSibling;
+                abstract.classList.toggle('show');
+                button.textContent = abstract.classList.contains('show') ? 'Hide Abstract' : 'Show Abstract';
+            });
+        });
+    </script>
+
 </body>
 
 </html>
